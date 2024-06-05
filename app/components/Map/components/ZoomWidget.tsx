@@ -66,18 +66,64 @@ const ZoomWidget: React.FC<Props> = function (props) {
   };
 
   return (
-    <div className="absolute bottom-8 right-4 flex divide-x-2 divide-sky-500 rounded-lg bg-slate-50/80 dark:divide-sky-700 dark:bg-sky-700/80">
+    <div className="absolute bottom-8 right-4 flex divide-x divide-gray-800 overflow-hidden rounded-lg bg-sky-100/80 dark:divide-gray-100 dark:bg-sky-700/80">
       <button
-        className="h-6 w-6 shrink-0 text-base dark:text-slate-200"
+        className="flex h-6 w-6 shrink-0 items-center justify-center text-gray-800 hover:bg-sky-200 dark:text-gray-100 dark:hover:bg-sky-600"
         onClick={handleZoomIn}
       >
-        +
+        <svg
+          width="12px"
+          height="12px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            {' '}
+            <path
+              d="M4 12H20M12 4V20"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </g>
+        </svg>
       </button>
       <button
-        className="h-6 w-6 shrink-0 text-base dark:text-slate-200"
+        className="flex h-6 w-6 shrink-0 items-center justify-center text-gray-800 hover:bg-sky-200 dark:text-gray-100 dark:hover:bg-sky-600"
         onClick={handleZoomOut}
       >
-        -
+        <svg
+          width="12px"
+          height="12px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            {' '}
+            <path
+              d="M6 12L18 12"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </g>
+        </svg>
       </button>
     </div>
   );
